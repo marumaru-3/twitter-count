@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twitter文字数カウント</title>
+    <script
+      src="https://kit.fontawesome.com/f5db147be5.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="color-mode">
+      <div class="detail_bg"></div>
+      <header>
+        <h1>Twitter文字数カウント</h1>
+      </header>
+      <main class="w-800">
+        <div class="left-contents">
+          <div class="sp_icon">
+            <i class="fa-solid fa-spell-check"></i>
+          </div>
+          <ul class="detail">
+            <li>文字数：<span class="twitter_start">0</span></li>
+            <li>半角数(改行含む)：<span class="half">0</span></li>
+            <li>全角 / 絵文字数：<span class="full">0</span></li>
+            <li>URL数：<span class="url">0</span></li>
+            <li>行数：<span class="row">0</span></li>
+          </ul>
+        </div>
+        <div class="main-contents">
+          <div class="ex">
+            <h4>◆文字数のカウントについて：</h4>
+            <p>
+              Twitterの文字数のカウント方法に準じています。（2023年3月現在）<br />
+              <span class="method">半角文字 / 改行：0.5文字</span>
+              <span class="method">全角文字 / 絵文字：1文字</span>
+              <span class="method">URL：11.5文字</span><br class="sp_none" />
+              ※小数点以下を四捨五入してカウントしています。
+              <span class="icon_detail"
+                >左にあるアイコンで文字数の詳細を確認できます。</span
+              >
+            </p>
+          </div>
+          <p class="re_count">
+            残り
+            <span class="twitter_end">140</span> 文字
+            <span class="border"></span>
+          </p>
+          <div class="textarea_group">
+            <textarea
+              name="text"
+              id="text"
+              cols="50"
+              rows="10"
+              placeholder="いまどうしてる？"
+              autofocus
+            ></textarea>
+            <div class="textarea-bottom">
+              <div class="btn_group">
+                <button id="reset">リセットする</button>
+                <button id="copy">コピーする</button>
+              </div>
+              <p class="main_count">
+                <span class="twitter_start">0</span>
+                /
+                <span>140</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- <div class="switching_group">
+        <button class="default active" type="button"></button>
+        <button class="dark" type="button"></button>
+      </div> -->
+      <footer>
+        <p>Copyright 2023 yukinaga All Right Resarved.</p>
+      </footer>
+    </div>
+    <script src="emojiRegex.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
